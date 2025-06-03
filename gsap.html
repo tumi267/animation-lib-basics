@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .header{
+            height: 15vh;
+       
+            background-color: red;
+        }
+        .footer{
+            height: 15vh;
+            background-color: blue;
+        }
+        .links{
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            color: white;
+        }
+        .btn2,
+        .btn{
+            align-self: center;
+        }
+        .sidebar{
+            background-color: green;
+            width: 15vw;
+        }
+        .content{
+            flex-grow: 1;
+            display: flex;
+            justify-content: space-between;
+        }
+        .text{
+            display: flex;
+            flex-direction: column;
+            height: 80vh;
+            width: 70vw;
+            overflow-y:auto;
+            position: relative;
+        }
+        .hide{
+            display: none;
+        }
+        .tracking_text {
+        display: inline-block; /* Required for transforms */
+        transform-style: preserve-3d; /* Enhances 3D effect */
+        margin-left: auto;
+        margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="links">
+        <div class="link">Link 1</div>
+        <div class="link">Link 2</div>
+        <div class="link">Link 3</div>
+    </div>
+</div>
+<div class="content">
+    <div class="sidebar left"></div>
+    <div class="text">
+    <h1 class="headline">hello world</h1>
+    <h2 class="sub_headline">example of text animation</h2>
+    <p class="line_amination">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fermentum sodales odio non interdum. Morbi maximus lacus in ipsum ultrices, a fringilla turpis maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu pellentesque velit. Integer egestas ut orci in fringilla. Nullam at vehicula tortor. Nunc bibendum turpis nec mollis mattis. Vivamus hendrerit aliquet massa. Nulla fermentum aliquet ullamcorper. Proin vitae orci sed diam gravida lacinia eu vitae nulla. Donec ultrices risus vitae convallis congue. Nulla non nisi ullamcorper, dictum nisi ut, hendrerit arcu. Nullam eu nibh augue. Donec eget dapibus mi.
+
+Quisque in posuere eros. Aliquam sit amet felis suscipit, egestas risus et, gravida lorem. Integer efficitur, turpis a vehicula scelerisque, odio enim rutrum tellus, a maximus urna metus id purus. Nunc sagittis semper tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas facilisis justo enim, at elementum mi feugiat quis. Nam consequat libero ut ligula placerat, nec interdum magna posuere. Quisque sagittis laoreet lectus efficitur ultricies. Sed eleifend, felis sed rutrum hendrerit, risus nibh mattis diam, vel suscipit ipsum risus vitae mi. Donec aliquet dapibus sodales.
+
+Fusce sit amet viverra augue, vitae varius purus. Vivamus et dignissim metus, eu ornare odio. In et dolor molestie, ultrices odio quis, hendrerit urna. Donec maximus nisl eget auctor cursus. Pellentesque ligula tortor, efficitur ut ornare ac, dapibus non purus. Nulla tellus sapien, finibus in neque ut, sollicitudin efficitur mauris. Vivamus quis arcu risus. Phasellus sed tincidunt dolor. Aenean aliquet posuere tincidunt.
+
+Cras vel congue dui. Sed nunc lectus, varius quis elit quis, tincidunt placerat lectus. Phasellus malesuada metus justo. In egestas, enim porta iaculis interdum, leo mi consequat sem, et pellentesque libero ipsum a dui. Aliquam efficitur purus nec tristique aliquam. Mauris quis varius magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed fermentum vehicula lacus at convallis.
+
+Duis mattis accumsan est ac tincidunt. Ut ultrices fringilla suscipit. Nullam malesuada laoreet ante pretium gravida. Etiam consequat, justo eget posuere elementum, lectus nisi eleifend elit, sit amet malesuada nibh leo in lacus. Nulla pellentesque in massa ut bibendum. Cras elit quam, dapibus et magna vitae, imperdiet rutrum ligula. Vivamus placerat eget lectus in dignissim. Nam in gravida sapien, a aliquam erat. Etiam nec mollis ante. In tempor, quam vitae volutpat tempor, mauris ligula mattis eros, vitae venenatis augue neque vitae sapien. Curabitur ac volutpat lectus.
+    </p>
+
+    <h3 class="decode">Decode Animation</h3>
+
+    <p class="mouse_over_scramble">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fermentum sodales odio non interdum. Morbi maximus lacus in ipsum ultrices, a fringilla turpis maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu pellentesque velit. Integer egestas ut orci in fringilla. Nullam at vehicula tortor. Nunc bibendum turpis nec mollis mattis. Vivamus hendrerit aliquet massa. Nulla fermentum aliquet ullamcorper. Proin vitae orci sed diam gravida lacinia eu vitae nulla. Donec ultrices risus vitae convallis congue. Nulla non nisi ullamcorper, dictum nisi ut, hendrerit arcu. Nullam eu nibh augue. Donec eget dapibus mi.
+
+Quisque in posuere eros. Aliquam sit amet felis suscipit, egestas risus et, gravida lorem. Integer efficitur, turpis a vehicula scelerisque, odio enim rutrum tellus, a maximus urna metus id purus. Nunc sagittis semper tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas facilisis justo enim, at elementum mi feugiat quis. Nam consequat libero ut ligula placerat, nec interdum magna posuere. Quisque sagittis laoreet lectus efficitur ultricies. Sed eleifend, felis sed rutrum hendrerit, risus nibh mattis diam, vel suscipit ipsum risus vitae mi. Donec aliquet dapibus sodales.
+
+Fusce sit amet viverra augue, vitae varius purus. Vivamus et dignissim metus, eu ornare odio. In et dolor molestie, ultrices odio quis, hendrerit urna. Donec maximus nisl eget auctor cursus. Pellentesque ligula tortor, efficitur ut ornare ac, dapibus non purus. Nulla tellus sapien, finibus in neque ut, sollicitudin efficitur mauris. Vivamus quis arcu risus. Phasellus sed tincidunt dolor. Aenean aliquet posuere tincidunt.
+
+Cras vel congue dui. Sed nunc lectus, varius quis elit quis, tincidunt placerat lectus. Phasellus malesuada metus justo. In egestas, enim porta iaculis interdum, leo mi consequat sem, et pellentesque libero ipsum a dui. Aliquam efficitur purus nec tristique aliquam. Mauris quis varius magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed fermentum vehicula lacus at convallis.
+
+Duis mattis accumsan est ac tincidunt. Ut ultrices fringilla suscipit. Nullam malesuada laoreet ante pretium gravida. Etiam consequat, justo eget posuere elementum, lectus nisi eleifend elit, sit amet malesuada nibh leo in lacus. Nulla pellentesque in massa ut bibendum. Cras elit quam, dapibus et magna vitae, imperdiet rutrum ligula. Vivamus placerat eget lectus in dignissim. Nam in gravida sapien, a aliquam erat. Etiam nec mollis ante. In tempor, quam vitae volutpat tempor, mauris ligula mattis eros, vitae venenatis augue neque vitae sapien. Curabitur ac volutpat lectus.
+    </p>
+
+    <h3 class="tracking_text">tracking text</h3>
+
+    <p class="line_amination_mask">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fermentum sodales odio non interdum. Morbi maximus lacus in ipsum ultrices, a fringilla turpis maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu pellentesque velit. Integer egestas ut orci in fringilla. Nullam at vehicula tortor. Nunc bibendum turpis nec mollis mattis. Vivamus hendrerit aliquet massa. Nulla fermentum aliquet ullamcorper. Proin vitae orci sed diam gravida lacinia eu vitae nulla. Donec ultrices risus vitae convallis congue. Nulla non nisi ullamcorper, dictum nisi ut, hendrerit arcu. Nullam eu nibh augue. Donec eget dapibus mi.
+
+Quisque in posuere eros. Aliquam sit amet felis suscipit, egestas risus et, gravida lorem. Integer efficitur, turpis a vehicula scelerisque, odio enim rutrum tellus, a maximus urna metus id purus. Nunc sagittis semper tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas facilisis justo enim, at elementum mi feugiat quis. Nam consequat libero ut ligula placerat, nec interdum magna posuere. Quisque sagittis laoreet lectus efficitur ultricies. Sed eleifend, felis sed rutrum hendrerit, risus nibh mattis diam, vel suscipit ipsum risus vitae mi. Donec aliquet dapibus sodales.
+
+Fusce sit amet viverra augue, vitae varius purus. Vivamus et dignissim metus, eu ornare odio. In et dolor molestie, ultrices odio quis, hendrerit urna. Donec maximus nisl eget auctor cursus. Pellentesque ligula tortor, efficitur ut ornare ac, dapibus non purus. Nulla tellus sapien, finibus in neque ut, sollicitudin efficitur mauris. Vivamus quis arcu risus. Phasellus sed tincidunt dolor. Aenean aliquet posuere tincidunt.
+
+Cras vel congue dui. Sed nunc lectus, varius quis elit quis, tincidunt placerat lectus. Phasellus malesuada metus justo. In egestas, enim porta iaculis interdum, leo mi consequat sem, et pellentesque libero ipsum a dui. Aliquam efficitur purus nec tristique aliquam. Mauris quis varius magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed fermentum vehicula lacus at convallis.
+
+Duis mattis accumsan est ac tincidunt. Ut ultrices fringilla suscipit. Nullam malesuada laoreet ante pretium gravida. Etiam consequat, justo eget posuere elementum, lectus nisi eleifend elit, sit amet malesuada nibh leo in lacus. Nulla pellentesque in massa ut bibendum. Cras elit quam, dapibus et magna vitae, imperdiet rutrum ligula. Vivamus placerat eget lectus in dignissim. Nam in gravida sapien, a aliquam erat. Etiam nec mollis ante. In tempor, quam vitae volutpat tempor, mauris ligula mattis eros, vitae venenatis augue neque vitae sapien. Curabitur ac volutpat lectus.
+    </p>
+    <button class="btn">reverse</button>
+    <button class="btn2 hide">animate in</button>
+</div>
+
+    
+    <div class="sidebar right"></div>
+</div>
+<div class="footer"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Draggable.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/DrawSVGPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/EaselPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Flip.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/GSDevTools.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/InertiaPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/MotionPathHelper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/MotionPathPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/MorphSVGPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Observer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Physics2DPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/PhysicsPropsPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/PixiPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrambleTextPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<!-- ScrollSmoother requires ScrollTrigger -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/TextPlugin.min.js"></script>
+<script>
+ // use a script tag or an external JS file
+ document.addEventListener("DOMContentLoaded", (event) => {
+  gsap.registerPlugin(Draggable,DrawSVGPlugin,EaselPlugin,Flip,GSDevTools,InertiaPlugin,MotionPathHelper,MotionPathPlugin,MorphSVGPlugin,Observer,Physics2DPlugin,PhysicsPropsPlugin,PixiPlugin,ScrambleTextPlugin,ScrollTrigger,ScrollSmoother,ScrollToPlugin,SplitText,TextPlugin)
+  // gsap code here!
+ });
+
+</script>
+<script src="script.js"></script>
+<script src="textReveal.js"></script>
+</body>
+</html>
