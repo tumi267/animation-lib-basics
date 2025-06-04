@@ -196,3 +196,11 @@ document.addEventListener('mouseleave', () => {
     duration: 1
   });
 });
+
+// Add Gradient Fade-In
+
+
+// Blur Effect
+
+
+// Dynamic Highlighting
