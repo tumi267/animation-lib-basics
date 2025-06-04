@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0; padding: 0 20px;
+        }
+        h2 {
+          margin-top: 60px;
+          margin-bottom: 20px;
+          font-size: 1.8rem;
+          color: #333;
+        }
+        .box {
+          width: 200px;
+          height: 100px;
+          background: #4a90e2;
+          margin-bottom: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          font-weight: bold;
+          border-radius: 8px;
+        }
+        /* For staggered container */
+        .stagger-container {
+          display: flex;
+          gap: 20px;
+          margin-bottom: 40px;
+        }
+        .stagger-item {
+          width: 60px;
+          height: 60px;
+          background: #50e3c2;
+          border-radius: 8px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          font-weight: bold;
+        }
+        /* Pin placeholder */
+        .pin-element {
+          height: 150px;
+          background: #f5a623;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #333;
+          font-weight: bold;
+          border-radius: 8px;
+          margin-bottom: 40px;
+        }
+        /* Progress bar container */
+        .progress-container {
+          width: 100%;
+          height: 8px;
+          background: #eee;
+          border-radius: 4px;
+          margin-bottom: 40px;
+        }
+        /* Progress bar itself */
+        .progress-bar {
+          width: 0%;
+          height: 100%;
+          background: #4a90e2;
+          border-radius: 4px;
+          transition: width 0.3s ease;
+        }
+        /* Scroll-activated class toggle element */
+        .toggle-element {
+          width: 100%;
+          height: 120px;
+          background: #ccc;
+          border-radius: 8px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #333;
+          font-weight: bold;
+          user-select: none;
+          margin-bottom: 40px;
+          transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .toggle-element.active {
+          background-color: #4a90e2;
+          color: white;
+        }
+        .blank{
+            height: 600px;
+            background-color: #333;
+            color: aliceblue;
+        }
+        #svg-stage {
+  max-width: 600px;
+  overflow: visible;
+
+}
+
+.ball {
+  fill: white;
+  visibility: hidden;
+}
+
+.line {
+  fill: none;
+  stroke: white;
+  stroke-width: 2px;
+}
+
+text {
+  fill: white;
+  font-size: 15px; 
+  visibility: hidden;
+}
+        .svg_contain{
+            background-color: grey;
+        }
+      </style>
+</head>
+<body>
+    <div class="blank"> scroll down</div>
+    <h2>Fade In/Out Elements</h2>
+    <div class="box fade-element">Fade In/Out</div>
+  
+    <h2>Slide In From Sides</h2>
+    <div class="box slide-in-left">Slide In Left</div>
+    <div class="box slide-in-right">Slide In Right</div>
+  
+    <h2>Scale Up Elements</h2>
+    <div class="box scale-up">Scale Up</div>
+  
+    <h2>Rotate Elements</h2>
+    <div class="box rotate">Rotate</div>
+  
+    <h2>Staggered Animations</h2>
+    <div class="stagger-container">
+      <div class="stagger-item">1</div>
+      <div class="stagger-item">2</div>
+      <div class="stagger-item">3</div>
+      <div class="stagger-item">4</div>
+      <div class="stagger-item">5</div>
+    </div>
+  
+    <h2>Pin Elements</h2>
+    <div class="pin-element">Pinned Element</div>
+
+    <h2>Color/Background Changes</h2>
+    <div class="box color-change">Color Change</div>
+  
+    <h2>Progress Bar</h2>
+    <div class="progress-container">
+      <div class="progress-bar"></div>
+    </div>
+    <div class="blank"></div>
+    <h2>Scroll-Activated Class Toggle</h2>
+    <div class="toggle-element">Toggle Active Class</div>
+    <div class="blank"></div>
+
+    <h2>svg follow scroll</h2>
+    <div class="svg_contain">
+    <svg id="svg-stage" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 600 1200">
+        <path class="line01 line" d="M 10 200 600 200" ></path>
+        <path class="line02 line" d="M 10 400 600 400" ></path>
+        <path class="line03 line" d="M 10 600 600 600" ></path>
+        <path class="line04 line" d="M 10 800 600 800" ></path>
+        <path class="line05 line" d="M 10 1000 600 1000" ></path>
+        <text class="text01" x="30" y="190">2018</text>
+        <text class="text02" x="30" y="390">2019</text>
+        <text class="text03" x="30" y="590">2020</text>
+      
+        <path class="theLine" 
+              d="M -5,0
+                 Q 450 230 300 450 
+                 T 130 750
+                 Q 100 850 300 1000
+                 T 150 1200"
+              fill="none" stroke="white" stroke-width="10px" />
+        
+        <circle class="ball ball01" r="20" cx="50" cy="100"></circle>
+        <circle class="ball ball02" r="20" cx="278" cy="201"></circle>
+        <circle class="ball ball03" r="20" cx="327" cy="401"></circle>
+        <circle class="ball ball04" r="20" cx="203" cy="601"></circle>
+      
+      </svg>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Draggable.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/DrawSVGPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/EaselPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Flip.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/GSDevTools.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/InertiaPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/MotionPathHelper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/MotionPathPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/MorphSVGPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Observer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Physics2DPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/PhysicsPropsPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/PixiPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrambleTextPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<!-- ScrollSmoother requires ScrollTrigger -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/TextPlugin.min.js"></script>
+<script>
+ // use a script tag or an external JS file
+ document.addEventListener("DOMContentLoaded", (event) => {
+  gsap.registerPlugin(Draggable,DrawSVGPlugin,EaselPlugin,Flip,GSDevTools,InertiaPlugin,MotionPathHelper,MotionPathPlugin,MorphSVGPlugin,Observer,Physics2DPlugin,PhysicsPropsPlugin,PixiPlugin,ScrambleTextPlugin,ScrollTrigger,ScrollSmoother,ScrollToPlugin,SplitText,TextPlugin)
+  // gsap code here!
+ });
+
+</script>
+<script src="scroll.js"></script>
+</body>
+</html>
+
